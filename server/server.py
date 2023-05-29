@@ -9,7 +9,8 @@ cors = CORS(app, origins="*")
 def handle_post_request():
     # Access the request data
     data = request.get_json()
-    sentence = data['sentence']
+    sentence = data['testo']
+
 
     # Generate the image
     image = concatenate_sentence_images(sentence)
@@ -17,8 +18,8 @@ def handle_post_request():
     image.save(image_path)
 
     # Return the image file as the response
-    return "Message received"
-    #return send_file(image_path, mimetype='image/png')
+    # return "Message received"
+    return send_file(image_path, mimetype='image/png')
 
 if __name__ == '__main__':
     app.run(port=2700)

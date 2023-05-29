@@ -1,8 +1,9 @@
 from PIL import Image
 import numpy as np
+import os 
 
-environment = "/home/coloranto/Desktop/progettoST/image/"
-
+environment = os.getcwd() + "/image/"
+print("ENV",environment)
 # Function to get the image for a given letter
 def get_letter_image(letter, background_color=(255, 255, 255)):
     letter = letter.lower()

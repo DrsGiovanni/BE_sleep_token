@@ -70,10 +70,12 @@ def concatenate_sentence_images(sentence, spacing=20):
 
     return sentence_image
 
+'''
 # Example usage
-sentence = "luca vuole bene a cittolo"
+sentence = "example"
 concatenated_image = concatenate_sentence_images(sentence, spacing=30)
 concatenated_image.show()
 
 
 concatenated_image.save("test2.png")
+'''

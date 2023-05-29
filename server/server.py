@@ -1,7 +1,9 @@
 from flask import Flask, request, send_file
 from imageGenerator import concatenate_sentence_images
+from flask_cors import CORS
 
 app = Flask(__name__)
+cors = CORS(app, origins="*")
 
 @app.route('/', methods=['POST'])
 def handle_post_request():
